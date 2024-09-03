@@ -5,7 +5,7 @@ echo "-- Running apt update -- "
 apt-get update
 
 echo "-- Installing rkhunter & sshpass -- "
-apt-get install -y rkhunter sshpass python3
+apt-get install -y rkhunter sshpass
 
 echo "-- Creating sftp user & group -- "
 groupadd sftp
