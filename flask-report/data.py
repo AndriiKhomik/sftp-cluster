@@ -3,8 +3,7 @@ import paramiko.util
 from stat import S_ISDIR, S_ISREG
 from os.path import join
 import os
-import matplotlib.pyplot as plt
-from pathlib import Path, PureWindowsPath
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -77,22 +76,6 @@ def aggregate_reports():
     return report
 
 
-# def generate_report_plot(report):
-#     users = list(report.keys())
-#     requests = list(report.values())
-
-#     plt.figure(figsize=(10, 5))
-#     plt.bar(users, requests, color='skyblue')
-#     plt.xlabel('Users')
-#     plt.ylabel('Number of requests')
-#     plt.title('Client Requests Report')
-#     plt.xticks(rotation=45)
-#     plt.tight_layout()
-
-#     plt.savefig('static/report.png')
-
-
 # Aggregate data and generate the report plot
 report = aggregate_reports()
-print(structured_data)
 # generate_report_plot(report)
